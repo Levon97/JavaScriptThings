@@ -1,3 +1,4 @@
+
 export default function User(name,email,photos,videos){
     this.name = name;
     this.email = email;
@@ -30,7 +31,7 @@ User.prototype.deleteVideo = function(){
      }
      else{
          this.videos.forEach(element => {
-            console.log(element.name,element.preview);
+            console.log(element.name,element);
          });
      }
  }

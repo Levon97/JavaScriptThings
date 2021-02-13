@@ -1,6 +1,6 @@
 import Multimedia from './multimedia.mjs';
 export default function Photo(name,resolation,size,format){
-    User.call(this,name,resolation,size)
+    Multimedia.call(this,name,resolation,size)
         this.format = format;
 }
 Photo.prototype =Object.create(Multimedia.prototype);
