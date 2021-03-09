@@ -1,0 +1,99 @@
+Root explanation 
+
+
+POST /register   - registration blank
+
+body
+{
+    "name": "blabla"  (must conteins min 3 letters) 
+    "lastName'": "blablayan" (must conteins min 3 letters)
+    "mail": blabla@gmail.com (valid email schema)
+    "password" blabla5677 (min 6 symbols )
+}
+
+--------------------------------------------------------------------
+
+POST /login
+
+body
+{
+    "mail": blabla@gmail.com (valid email schema)
+    "password" blabla5677 (min 6 symbols )
+}
+--------------------------------------------------------------------
+
+GET /guest/posts
+
+giving the number of users and post as a site news 
+--------------------------------------------------------------------
+
+
+POST /user/posts
+creating and saving post to db .
+1.post must contains photo
+2.description is optional
+
+using <<potmans-body-form data>>  we can upload photo 
+
+key  image : value : (choosing photo we want to upload)
+key  description: value: text 
+--------------------------------------------------------------------
+
+
+GET /user/posts/:id
+
+getting post by id.
+--------------------------------------------------------------------
+
+PUT /user/posts/:id
+
+editing post with by id.
+uploading another photo or writing new  description or both.
+its cheking  is that post belongs to user that logined after that  if its logined users post 
+post can be edited
+--------------------------------------------------------------------
+DELETE /user/posts/:id
+
+deleting post by id.
+checking like editing
+--------------------------------------------------------------------
+
+GET /user/posts/created_by/:id
+
+gives post that created by specific user.
+--------------------------------------------------------------------
+
+/user/posts/recently_created
+gives days posts
+--------------------------------------------------------------------
+
+/user/posts
+
+gives all posts in the world
+--------------------------------------------------------------------
+
+/user/posts/personal_created
+
+gives logined user posts
+--------------------------------------------------------------------
+
+/user/posts/:search
+
+searching posts by description 
+--------------------------------------------------------------------
+
+/user/:search
+
+searching users by name and lastName 
+--------------------------------------------------------------------
+
+
+
+
+
+links
+https://mongoosejs.com/docs/
+https://www.youtube.com/watch?v=srPXMt1Q0nY
+https://codeburst.io/to-handle-authentication-with-node-js-express-mongo-jwt-7e55f5818181
+https://www.npmjs.com/package/multer
+https://www.youtube.com/watch?v=vjf774RKrLc&t=2495s
